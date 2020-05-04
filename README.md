@@ -8,12 +8,13 @@ cuando se vallan a subir las modificaciones del proyecto a traves del GitHub Des
 Tareas Pendientes 
 
 Quirama
+texturas de ladrillo
 
 
 
 Santi
-
-
+iluminar el pasillo de acceso al claustro, 
+poner luz en las farolas (lamparas de calle)
 
 
 Asdrubal
