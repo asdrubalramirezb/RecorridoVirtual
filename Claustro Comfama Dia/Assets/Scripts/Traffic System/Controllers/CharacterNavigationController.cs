@@ -21,23 +21,23 @@ public class CharacterNavigationController : MonoBehaviour
     private float accelerationRate;
     [SerializeField][Range(0f,1f)]
     private float decelerationRate;
-    [Header("Collision detection")]
-    [SerializeField]
-    private bool hasToStop;
-    [SerializeField]
-    private LayerMask agents;
-    [SerializeField]
-    private float maxRayDistance;
-    [SerializeField]
-    private float collisionStoppingDistance;
-    public GameObject collisionHitPoint;
-    [SerializeField][Header("Warning Dev mode")]
-    private float collisionWarningDistance;
-    [SerializeField]
-    private bool collisionWarning;
+    //[Header("Collision detection")]
+    //[SerializeField]
+    //private bool hasToStop;
+    //[SerializeField]
+    //private LayerMask agents;
+    //[SerializeField]
+    //private float maxRayDistance;
+    //[SerializeField]
+    //private float collisionStoppingDistance;
+    //public GameObject collisionHitPoint;
+    //[SerializeField][Header("Warning Dev mode")]
+    //private float collisionWarningDistance;
+    //[SerializeField]
+    //private bool collisionWarning;
 
-    public bool HasToStop { get => hasToStop; set => hasToStop = value; }
-    public bool CollisionWarning { get => collisionWarning; set => collisionWarning = value; }
+    //public bool HasToStop { get => hasToStop; set => hasToStop = value; }
+    //public bool CollisionWarning { get => collisionWarning; set => collisionWarning = value; }
 
     void Start()
     {
@@ -102,36 +102,36 @@ public class CharacterNavigationController : MonoBehaviour
         Gizmos.DrawWireSphere(this.transform.position, stopDistance);
     }
 
-    void CollisionDetection() {
-        RaycastHit hit;
-        if (Physics.Raycast(collisionHitPoint.transform.position, collisionHitPoint.transform.forward, out hit, maxRayDistance, agents))
-        {
-            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
+    //void CollisionDetection() {
+    //    RaycastHit hit;
+    //    if (Physics.Raycast(collisionHitPoint.transform.position, collisionHitPoint.transform.forward, out hit, maxRayDistance, agents))
+    //    {
+    //        Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
 
-                if (hit.distance <= collisionStoppingDistance)
-                {
-                    HasToStop = true;
-                    if (hit.distance <= collisionWarningDistance)
-                    {
-                        CollisionWarning = true;
-                    }
-                    else
-                    {
-                        CollisionWarning = false;
-                    }
-                }
-                else
-                {
-                    HasToStop = false;
-                }
+    //            if (hit.distance <= collisionStoppingDistance)
+    //            {
+    //                HasToStop = true;
+    //                if (hit.distance <= collisionWarningDistance)
+    //                {
+    //                    CollisionWarning = true;
+    //                }
+    //                else
+    //                {
+    //                    CollisionWarning = false;
+    //                }
+    //            }
+    //            else
+    //            {
+    //                HasToStop = false;
+    //            }
            
-        }
-        else {
-            HasToStop = false;
-        }
+    //    }
+    //    else {
+    //        HasToStop = false;
+    //    }
        
         
-    }
+    //}
 
    
 
